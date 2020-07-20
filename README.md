@@ -18,10 +18,10 @@ Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
 heroku create stranger-things-trybe01 --buildpack mars/create-react-app
 git remote rename front-domain
-heroku config:set strangerThingsConfig="https://floating-fortress-36656.herokuapp.com/" --app stranger-things-trybe01
-heroku config:set upsideDownConfig="https://obscure-basin-84879.herokuapp.com/" --app stranger-things-trybe01
-heroku config:set upsideTimeout="30000" --app stranger-things-trybe01
-heroku config:set strangerTimeout="30000" --app stranger-things-trybe01
+heroku config:set URL="https://floating-fortress-36656.herokuapp.com/" --app stranger-things-trybe01
+heroku config:set URLDOWN="https://obscure-basin-84879.herokuapp.com/" --app stranger-things-trybe01
+heroku config:set CONFIG="30000" --app stranger-things-trybe01
+heroku config:set DOWNCONFIG="30000" --app stranger-things-trybe01
 git push front-domain douglas-he-stranger-things:master
 
 

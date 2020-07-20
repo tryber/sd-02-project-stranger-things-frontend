@@ -7,13 +7,13 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: process.env.strangerThingsConfig,
-  timeout: Number(process.env.strangerTimeout),
+  url: process.env.URL,
+  timeout: Number(process.env.CONFIG),
 };
 
 const upsideDownConfig = {
-  url: process.env.upsideDownConfig,
-  timeout: Number(process.env.upsideTimeout),
+  url: process.env.URLDOWN,
+  timeout: Number(process.env.DOWNCONFIG),
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
