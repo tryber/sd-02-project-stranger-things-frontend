@@ -1,6 +1,5 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
-require('dotenv').config()
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
@@ -15,7 +14,7 @@ const upsideDownConfig = {
   url: process.env.URLDOWN,
   timeout: Number(process.env.DOWNCONFIG),
 };
-
+console.log(process.env)
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
