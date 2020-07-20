@@ -1,21 +1,18 @@
 import React from 'react';
 import CharactersService from '../services/charactersAPI';
-import runtimeEnv from '@mars/heroku-js-runtime-env';
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
-const env = runtimeEnv();
-
 const strangerThingsConfig = {
-  url: env.URL,
-  timeout: Number(env.CONFIG),
+  url: process.env.REACT_APP_URL,
+  timeout: Number(process.env.REACT_APP_CONFIG),
 };
 
 const upsideDownConfig = {
-  url: env.URLDOWN,
-  timeout: Number(env.DOWNCONFIG),
+  url: process.env.REACT_APP_URLDOWN,
+  timeout: Number(process.env.DOWNCONFIG),
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
