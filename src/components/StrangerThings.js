@@ -14,7 +14,8 @@ const upsideDownConfig = {
   url: process.env.upsideDownConfig,
   timeout: Number(process.env.upsideTimeout),
 };
-
+console.log(upsideDownConfig);
+console.log(strangerThingsConfig);
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
