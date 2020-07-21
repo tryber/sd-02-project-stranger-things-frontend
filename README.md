@@ -14,8 +14,16 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 
 Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
-
+ `heroku create rw-st-frontend --buildpack mars/create-react-app`
+ 
+ `heroku config:set STRANGER_THINGS_CONFIG=http://richard-st-hawkings.herokuapp.com/ UPSIDE_DOWN_CONFIG=http://richard-st-upsidedown.herokuapp.com/ TIMEOUT=30000 -a rw-st-frontend`
+ 
+ `heroku config -a rw-st-frontend`
+ 
+ `git remote rename heroku front`
+ 
+ `git push front feature/frontend:master`
+ 
 ## Bônus
 
 ### 10 - Multi-ambientes
