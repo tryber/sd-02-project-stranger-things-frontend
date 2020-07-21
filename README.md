@@ -14,7 +14,15 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 
 Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+heroku create andrey-stranger-things --buildpack mars/create-react-app
+
+heroku config:set \
+REACT_APP_HAWKINGS=https://andrey-ts-hawkins.herokuapp.com/ \
+REACT_APP_UPSIDE_DOWN=https://andrey-ts-upside-down.herokuapp.com/ \
+REACT_APP_TIMEOUT=30000 \
+-a andrey-stranger-things
+
+git push heroku andrey-stranger-things:master
 
 ## Bônus
 
@@ -22,4 +30,7 @@ Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
 Para tornar a minha a minha aplicação Multi-ambiente, fiz o seguinte procedimento:
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+git remote rename heroku development
+heroku create --remote production --app andrey-ts-production --buildpack mars/create-react-app
+
+git push production andrey-stranger-things:master
