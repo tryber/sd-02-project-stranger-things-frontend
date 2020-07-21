@@ -14,7 +14,8 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 
 Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+heroku create --buildpack mars/create-react-app
+
 
 ## Bônus
 
