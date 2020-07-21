@@ -6,13 +6,13 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'https://liipe-st-be.herokuapp.com/',
-  timeout: 30000,
+  url: process.env.NORMAL_ENDPOINT,
+  timeout: process.env.TIMEOUT,
 };
 
 const upsideDownConfig = {
-  url: 'https://liipe-st-inverse.herokuapp.com/',
-  timeout: 30000,
+  url: process.env.INVERSE_ENDPOINT,
+  timeout: process.env.TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
