@@ -6,13 +6,13 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
-  timeout: 30000,
+  url: process.env.REACT_APP_normalWorld,
+  timeout: Number(process.env.REACT_APP_timeout),
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
-  timeout: 30000,
+  url: process.env.REACT_APP_upsideDown,
+  timeout: Number(process.env.REACT_APP_timeout),
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -40,6 +40,9 @@ class StrangerThings extends React.Component {
   }
 
   changeRealityClick() {
+    console.log(1, process.env.REACT_APP_upsideDown)
+    console.log(2, process.env.REACT_APP_timeout)
+    console.log(3, process.env.REACT_APP_normalWorld)
     this.setState({
       hereIsTheUpsideDownWorld: !this.state.hereIsTheUpsideDownWorld,
       characters: [],
