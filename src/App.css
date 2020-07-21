@@ -100,3 +100,11 @@
   width: 900px;
   text-align: left;
 }
+
+.devmode {
+  background-color: white;
+  color: red;
+  font-size: 3rem;
+  left: 0;
+  position: absolute;
+}
