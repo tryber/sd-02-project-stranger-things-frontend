@@ -7,12 +7,12 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS,
-  timeout: process.env.REACT_APP_TIMEOUT,
+  timeout: Number(process.env.REACT_APP_TIMEOUT),
 };
 
 const upsideDownConfig = {
   url: process.env.REACT_APP_UPSIDE_DOWN,
-  timeout: process.env.REACT_APP_TIMEOUT,
+  timeout: Number(process.env.REACT_APP_TIMEOUT),
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -53,7 +53,6 @@ class StrangerThings extends React.Component {
   }
 
   searchClick() {
-    console.log('Douglas')
     this.setState(
       { page: 1 },
       this.searchCharacter(1)
