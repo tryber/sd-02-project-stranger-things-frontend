@@ -40,6 +40,9 @@ class StrangerThings extends React.Component {
   }
 
   changeRealityClick() {
+    console.log(1, process.env.REACT_APP_upsideDown)
+    console.log(2, process.env.REACT_APP_timeout)
+    console.log(3, process.env.REACT_APP_normalWorld)
     this.setState({
       hereIsTheUpsideDownWorld: !this.state.hereIsTheUpsideDownWorld,
       characters: [],
