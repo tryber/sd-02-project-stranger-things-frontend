@@ -18,9 +18,6 @@ const upsideDownConfig = {
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
 
-console.log('charactersService', charactersService);
-console.log('charactersUpsideDownService', charactersUpsideDownService)
-
 class StrangerThings extends React.Component {
   constructor(props) {
     super(props);
