@@ -7,12 +7,12 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_STRANGER_THINGS_CONFIG,
-  timeout: process.env.REACT_APP_TIMEOUT,
+  timeout: Number(process.env.REACT_APP_TIMEOUT),
 };
 
 const upsideDownConfig = {
   url: process.env.REACT_APP_UPSIDE_DOWN_CONFIG,
-  timeout: process.env.REACT_APP_TIMEOUT,
+  timeout: Number(process.env.REACT_APP_TIMEOUT),
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
