@@ -54,9 +54,7 @@ class StrangerThings extends React.Component {
 
   searchClick() {
     this.setState(
-      {
-        page: 1,
-      },
+      { page: 1 },
       this.searchCharacter(1)
     );
   }
