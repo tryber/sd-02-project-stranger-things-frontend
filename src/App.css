@@ -83,12 +83,13 @@
   font-style: normal;
   font-weight: bold;
 
-  color: #c11b1f;
+  color: #3c1bd9;
   background: rgba(211, 211, 211, 0.637);
 
   font-size: x-large;
 
   margin: 10px;
+  text-shadow: black;
 }
 
 .strangerfy > div > input {
@@ -98,4 +99,12 @@
 .strangerfy > div > table {
   width: 900px;
   text-align: left;
+}
+
+.devmode {
+  background-color: white;
+  color: red;
+  font-size: 3rem;
+  left: 0;
+  position: absolute;
 }
