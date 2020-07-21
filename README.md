@@ -22,6 +22,7 @@ REACT_APP_UPSIDE_DOWN=https://andrey-ts-upside-down.herokuapp.com/ \
 REACT_APP_TIMEOUT=30000 \
 -a andrey-stranger-things
 
+git push heroku andrey-stranger-things:master
 
 ## Bônus
 
@@ -31,3 +32,5 @@ Para tornar a minha a minha aplicação Multi-ambiente, fiz o seguinte procedime
 
 git remote rename heroku development
 heroku create --remote production --app andrey-ts-production --buildpack mars/create-react-app
+
+git push production andrey-stranger-things:master
