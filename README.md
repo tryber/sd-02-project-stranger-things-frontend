@@ -31,4 +31,14 @@ Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
 Para tornar a minha a minha aplicação Multi-ambiente, fiz o seguinte procedimento:
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+`git remote rename stranger-things production`
+
+`heroku create --remote development guicgs-stranger-things-dev --buildpack mars/create-react-app`
+
+`heroku config:set REACT_APP_HAWKINS_API=https://guicgs-st-backend.herokuapp.com/ --remote development`
+
+`heroku config:set REACT_APP_UPSIDE_DOWN_API=https://guicgs-st-backend-upside.herokuapp.com/ --remote development`
+
+`heroku config:set REACT_APP_API_TIMEOUT=30000 --remote development`
+
+`git push development guicgs-stranger-things-frontend:master`

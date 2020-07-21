@@ -83,12 +83,13 @@
   font-style: normal;
   font-weight: bold;
 
-  color: #c11b1f;
+  color: #3c1bd9;
   background: rgba(211, 211, 211, 0.637);
 
   font-size: x-large;
 
   margin: 10px;
+  text-shadow: black;
 }
 
 .strangerfy > div > input {
