@@ -7,12 +7,12 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 
 const strangerThingsConfig = {
   url: process.env.NORMAL_ENDPOINT,
-  timeout: process.env.TIMEOUT,
+  timeout: Number(process.env.TIMEOUT),
 };
 
 const upsideDownConfig = {
   url: process.env.INVERSE_ENDPOINT,
-  timeout: process.env.TIMEOUT,
+  timeout: Number(process.env.TIMEOUT),
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -98,6 +98,8 @@ class StrangerThings extends React.Component {
   }
 
   render() {
+    console.log('tipo do processo', typeof process.env.TIMEOUT);
+    console.log('endereços', process.env.INVERSE_ENDPOINT);
     return (
       <div
         className={`reality ${getRealityClass(
