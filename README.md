@@ -16,6 +16,14 @@ Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
 `Adicione aqui os comandos utilizados, de maneira sequencial.`
 
+```
+$ heroku create --remote heroku-st front-st --buildpack mars/create-react-app
+
+$ heroku config:set normalWorld=https://stranger-things.herokuapp.com/ \
+upsideDown=https://stranger-things-up-down.herokuapp.com/ timeout=30000 --app front-st
+
+```
+
 ## Bônus
 
 ### 10 - Multi-ambientes
