@@ -98,8 +98,6 @@ class StrangerThings extends React.Component {
   }
 
   render() {
-    console.log('tipo do processo', typeof process.env.TIMEOUT);
-    console.log('endereços', process.env.INVERSE_ENDPOINT);
     return (
       <div
         className={`reality ${getRealityClass(
