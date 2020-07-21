@@ -14,7 +14,13 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 
 Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
-heroku create --buildpack mars/create-react-app
+heroku create andrey-stranger-things --buildpack mars/create-react-app
+
+heroku config:set \
+HAWKINGS='https://andrey-ts-hawkins.herokuapp.com/' \
+UPSIDE_DOWN='https://andrey-ts-upside-down.herokuapp.com/' \
+TIMEOUT=30000 \
+-a andrey-stranger-things
 
 
 ## Bônus

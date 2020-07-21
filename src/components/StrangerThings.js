@@ -6,17 +6,20 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'https://andrey-ts-hawkins.herokuapp.com/',
-  timeout: 30000,
+  url: process.env.HAWKINGS,
+  timeout: process.env.TIMEOUT,
 };
 
 const upsideDownConfig = {
-  url: 'https://andrey-ts-upside-down.herokuapp.com/',
-  timeout: 30000,
+  url: process.env.UPSIDE_DOWN,
+  timeout: process.env.TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
 const charactersUpsideDownService = new CharactersService(upsideDownConfig);
+
+console.log('charactersService', charactersService);
+console.log('charactersUpsideDownService', charactersUpsideDownService)
 
 class StrangerThings extends React.Component {
   constructor(props) {
