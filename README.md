@@ -17,9 +17,9 @@ Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 heroku create andrey-stranger-things --buildpack mars/create-react-app
 
 heroku config:set \
-HAWKINGS='https://andrey-ts-hawkins.herokuapp.com/' \
-UPSIDE_DOWN='https://andrey-ts-upside-down.herokuapp.com/' \
-TIMEOUT=30000 \
+REACT_APP_HAWKINGS=https://andrey-ts-hawkins.herokuapp.com/ \
+REACT_APP_UPSIDE_DOWN=https://andrey-ts-upside-down.herokuapp.com/ \
+REACT_APP_TIMEOUT=30000 \
 -a andrey-stranger-things
 
 
@@ -29,4 +29,5 @@ TIMEOUT=30000 \
 
 Para tornar a minha a minha aplicação Multi-ambiente, fiz o seguinte procedimento:
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+git remote rename heroku development
+heroku create --remote production --app andrey-ts-production --buildpack mars/create-react-app

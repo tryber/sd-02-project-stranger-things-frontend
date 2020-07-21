@@ -6,13 +6,13 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: process.env.HAWKINGS,
-  timeout: process.env.TIMEOUT,
+  url: process.env.REACT_APP_HAWKINGS,
+  timeout: process.env.REACT_APP_TIMEOUT,
 };
 
 const upsideDownConfig = {
-  url: process.env.UPSIDE_DOWN,
-  timeout: process.env.TIMEOUT,
+  url: process.env.REACT_APP_UPSIDE_DOWN,
+  timeout: process.env.REACT_APP_TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
