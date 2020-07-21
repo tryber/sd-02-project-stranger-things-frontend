@@ -63,15 +63,15 @@
 * Vamos definir essas variáveis ambiente no heroku através do terminal.
 * Insira o seguinte comandos com as devidas substituições para definir a variável da <strong>linha 9</strong>:
 
-      heroku config:set NORMAL_ENDPOINT="endereço-do-endpoint-normal-aqui" --app nome-do-seu-app-front-end
+      heroku config:set REACT_APP_NORMAL_ENDPOINT="endereço-do-endpoint-normal-aqui" --app nome-do-seu-app-front-end
 
 * Insira o seguinte comandos com as devidas substituições para definir a variável da <strong>linha 10 e 15</strong>:
 
-      heroku config:set TIMEOUT="30000" --app nome-do-seu-app-front-end
+      heroku config:set REACT_APP_TIMEOUT="30000" --app nome-do-seu-app-front-end
 
 * Insira o seguinte comandos com as devidas substituições para definir a variável da <strong>linha 14</strong>:
 
-      heroku config:set INVERSE_ENDPOINT="endereço-do-endpoint-invertido-aqui" --app nome-do-seu-app-front-end
+      heroku config:set REACT_APP_INVERSE_ENDPOINT="endereço-do-endpoint-invertido-aqui" --app nome-do-seu-app-front-end
 
 ---
 * ## Prontinho, sua aplicação já está pronta e realizando as requisições nos endpoints criados no Back-End.
