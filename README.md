@@ -53,7 +53,7 @@
 
       heroku apps
 ---
-# Passo 6:
+# Passo 5:
 
 * ## Criando variavéis de ambiente
 
