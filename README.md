@@ -22,6 +22,7 @@ REACT_APP_UPSIDE_DOWN_URL="https://miguelito-upside-down.herokuapp.com/" \
 REACT_APP_HAWKINS_TIMEOUT=45000 \
 REACT_APP_UPSIDE_DOWN_TIMEOUT=45000 \
 --app miguelito-stranger-things
+git push heroku miguel-stranger-things:master
 
 ## Bônus
 
