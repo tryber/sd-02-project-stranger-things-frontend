@@ -15,6 +15,14 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
 `Adicione aqui os comandos utilizados, de maneira sequencial.`
+heroku create miguelito-stranger-things --buildpack mars/create-react-app
+heroku config:set \
+REACT_APP_HAWKINS_URL="https://miguelito-hawkins.herokuapp.com/" \
+REACT_APP_UPSIDE_DOWN_URL="https://miguelito-upside-down.herokuapp.com/" \
+REACT_APP_HAWKINS_TIMEOUT=45000 \
+REACT_APP_UPSIDE_DOWN_TIMEOUT=45000 \
+--app miguelito-stranger-things
+git push heroku miguel-stranger-things:master
 
 ## Bônus
 
