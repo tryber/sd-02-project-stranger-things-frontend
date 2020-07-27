@@ -16,6 +16,20 @@ Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
 `Adicione aqui os comandos utilizados, de maneira sequencial.`
 
+`heroku create --buildpack mars/create-react-app --remote frontend --app johnatas-st-frontend`
+
+`heroku config:set \
+ REACT_APP_HAWKINS=https://johnatas-st-hawkins.herokuapp.com/ \
+ REACT_APP_UPSIDE_DOWN=https://johnatas-st-upside-down.herokuapp.com/ \
+ REACT_APP_TIMEOUT=30000 \
+ --app johnatas-st-frontend`
+ 
+`git add .`
+
+`git commit -m "Add React-App Frontend"`
+
+`git push frontend johnatas-henrique-stranger-things-frontend:master`
+
 ## Bônus
 
 ### 10 - Multi-ambientes

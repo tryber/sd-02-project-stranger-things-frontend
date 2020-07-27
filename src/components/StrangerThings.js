@@ -6,13 +6,13 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
-  timeout: 30000,
+  url: process.env.REACT_APP_HAWKINS,
+  timeout: Number(process.env.REACT_APP_TIMEOUT),
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
-  timeout: 30000,
+  url: process.env.REACT_APP_UPSIDE_DOWN,
+  timeout: Number(process.env.REACT_APP_TIMEOUT),
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);
@@ -54,9 +54,7 @@ class StrangerThings extends React.Component {
 
   searchClick() {
     this.setState(
-      {
-        page: 1,
-      },
+      { page: 1 },
       this.searchCharacter(1)
     );
   }
@@ -79,9 +77,7 @@ class StrangerThings extends React.Component {
     if (!this.state.characters.length) return;
 
     this.setState(
-      {
-        page: this.state.page + 1,
-      },
+      { page: this.state.page + 1 },
       () => this.searchCharacter()
     );
   }
