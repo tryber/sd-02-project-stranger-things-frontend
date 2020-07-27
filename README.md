@@ -16,19 +16,19 @@ Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
 `Adicione aqui os comandos utilizados, de maneira sequencial.`
 
-heroku create --buildpack mars/create-react-app --remote frontend --app johnatas-st-frontend 
+`heroku create --buildpack mars/create-react-app --remote frontend --app johnatas-st-frontend`
 
-heroku config:set \
+`heroku config:set \
  REACT_APP_HAWKINS=https://johnatas-st-hawkins.herokuapp.com/ \
  REACT_APP_UPSIDE_DOWN=https://johnatas-st-upside-down.herokuapp.com/ \
  REACT_APP_TIMEOUT=30000 \
- --app johnatas-st-development
+ --app johnatas-st-development`
  
-git add .
+`git add .`
 
-git commit -m "Add React-app Frontend"
+`git commit -m "Add React-app Frontend"`
 
-git push frontend johnatas-henrique-stranger-things-frontend:master
+`git push frontend johnatas-henrique-stranger-things-frontend:master`
 
 ## Bônus
 
