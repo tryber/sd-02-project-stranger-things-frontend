@@ -20,7 +20,7 @@ heroku config:set \
 REACT_APP_URL_UPSIDEDOWN=https://jct-upside-down-2801.herokuapp.com/ \
 REACT_APP_TIMEOUT=30000 \
 REACT_APP_URL_HAWKINS=https://jct-hawkins-2801.herokuapp.com/ \
--a jct-strangerfront-2801
+-a jct-strangerfront-2801 
 
 ## Bônus
 
