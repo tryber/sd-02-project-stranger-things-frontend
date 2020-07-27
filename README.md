@@ -14,7 +14,13 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 
 Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+heroku create jct-strangerfront-2801 --buildpack mars/create-react-app --remote strangerFront
+
+heroku config:set \
+REACT_APP_URL_UPSIDEDOWN=https://jct-upside-down-2801.herokuapp.com/ \
+REACT_APP_TIMEOUT=30000 \
+REACT_APP_URL_HAWKINS=https://jct-hawkins-2801.herokuapp.com/ \
+-a jct-strangerfront-2801 
 
 ## Bônus
 
