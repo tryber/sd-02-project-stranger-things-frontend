@@ -14,7 +14,15 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 
 Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+```
+heroku create --remote heroku lauro-st --buildpack mars/create-react-app
+
+heroku config:set REACT_APP_normalWorld=https://lauro-stranger-things.herokuapp.com/ REACT_APP_upsideDown=https://lauro-stranger-things-reverse.herokuapp.com/ REACT_APP_timeout=30000 --app lauro-st
+
+git add .
+git commit -m "Req. 9"
+git push heroku lauro-stranger-things:master
+```
 
 ## Bônus
 
