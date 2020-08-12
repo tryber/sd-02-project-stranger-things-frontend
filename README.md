@@ -17,9 +17,9 @@ heroku create --remote hawkins stranger-things-bolivar-front --buildpack mars/cr
 heroku create --remote upside-down stranger-things-bolivar-frontd --buildpack mars/create-react-app;
 git remote -v;
 
-heroku config:set URL=https://stranger-things-bolivar-front.herokuapp.com/ TIMEOUT=3000 PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-front;
+heroku config:set URL=https://stranger-things-bolivar.herokuapp.com/ TIMEOUT=3000 PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-front;
 
-heroku config:set URL=https://stranger-things-bolivar-frontd.herokuapp.com/ TIMEOUT=5000 PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-frontd;
+heroku config:set URL=https://stranger-things-bolivar-down.herokuapp.com/ TIMEOUT=5000 PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-frontd;
 
 git push hawkins bolivar-stranger-things-frontend:master;
 
