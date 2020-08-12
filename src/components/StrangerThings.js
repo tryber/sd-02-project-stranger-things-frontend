@@ -1,17 +1,16 @@
-import React from 'react';
-import CharactersService from '../services/charactersAPI';
+import React from "react";
+import CharactersService from "../services/charactersAPI";
 
-const getRealityClass = (hereIsTheUpsideDownWorld) => (
-  hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
-);
+const getRealityClass = (hereIsTheUpsideDownWorld) =>
+  hereIsTheUpsideDownWorld ? "upside-down" : "stranger-things";
 
 const strangerThingsConfig = {
-  url: 'http://localhost:3002',
+  // url: 'http://localhost:3002',
   timeout: 30000,
 };
 
 const upsideDownConfig = {
-  url: 'http://localhost:3003',
+  // url: "http://localhost:3003",
   timeout: 30000,
 };
 
@@ -24,7 +23,7 @@ class StrangerThings extends React.Component {
 
     this.state = {
       hereIsTheUpsideDownWorld: false,
-      characterName: '',
+      characterName: "",
       characters: [],
       page: 1,
     };
@@ -107,7 +106,7 @@ class StrangerThings extends React.Component {
         <div className="content strangerfy">
           <div className="change-reality">
             <button onClick={this.changeRealityClick}>
-              {' '}
+              {" "}
               Mudar de Realidade
             </button>
           </div>
