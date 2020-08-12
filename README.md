@@ -21,17 +21,25 @@ heroku config:set URL=https://stranger-things-bolivar-front.herokuapp.com/ TIMEO
 
 heroku config:set URL=https://stranger-things-bolivar-frontd.herokuapp.com/ TIMEOUT=5000 PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-frontd;
 
-git push hawkins bolivar-stranger-things-frontend:master
+git push hawkins bolivar-stranger-things-frontend:master;
 
-git push upside-down bolivar-stranger-things-frontend:master
+git push upside-down bolivar-stranger-things-frontend:master;
 
 ## Bônus
 
 ### 10 - Multi-ambientes
 
-Para tornar a minha a minha aplicação Multi-ambiente, fiz o seguinte procedimento:
+git remote rename hawkins development;
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+git remote rename upside-down production;
+
+git push development bolivar-stranger-things-frontend:master;
+
+git push production bolivar-stranger-things-frontend:master;
+
+heroku config:set NODE_ENV=development --app stranger-things-bolivar-front;
+
+heroku config:set NODE_ENV=production --app stranger-things-bolivar-frontd;
 
 ### 6 - Deploy Heroku
 
