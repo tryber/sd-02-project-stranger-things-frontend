@@ -21,6 +21,10 @@ heroku config:set URL=https://stranger-things-bolivar-front.herokuapp.com/ TIMEO
 
 heroku config:set URL=https://stranger-things-bolivar-frontd.herokuapp.com/ TIMEOUT=5000 PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-frontd;
 
+git push hawkins bolivar-stranger-things-frontend:master
+
+git push upside-down bolivar-stranger-things-frontend:master
+
 ## Bônus
 
 ### 10 - Multi-ambientes
