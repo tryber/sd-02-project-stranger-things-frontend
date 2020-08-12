@@ -52,6 +52,7 @@ class StrangerThings extends React.Component {
   }
 
   searchClick() {
+    console.log(process.env);
     this.setState(
       {
         page: 1,
