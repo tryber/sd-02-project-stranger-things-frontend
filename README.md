@@ -54,4 +54,4 @@ heroku create --remote production stranger-things-bolivar-prod;
 
 heroku config:set URL=https://stranger-things-bolivar-down.herokuapp.com/ TIMEOUT=3000 NODE_ENV=production PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-prod;
 
-git push development bolivar-stranger-things-frontend:master;
+git push production bolivar-stranger-things-frontend:master;
