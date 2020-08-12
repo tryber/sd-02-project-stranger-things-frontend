@@ -48,9 +48,9 @@ git status: On branch bolivar-stranger-things-backend;
 
 git remote rename hawkins development;
 
-git remote rename upside-down production;
+heroku config:set NODE_ENV=development --app stranger-things-bolivar-dev;
 
-heroku config:set NODE_ENV=development --app stranger-things-bolivar-front;
+git remote rename upside-down production;
 
 heroku config:set NODE_ENV=production --app stranger-things-bolivar-frontd;
 
