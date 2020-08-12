@@ -33,13 +33,17 @@ git remote rename hawkins development;
 
 git remote rename upside-down production;
 
-git push development bolivar-stranger-things-frontend:master;
-
-git push production bolivar-stranger-things-frontend:master;
-
 heroku config:set NODE_ENV=development --app stranger-things-bolivar-front;
 
 heroku config:set NODE_ENV=production --app stranger-things-bolivar-frontd;
+
+git push development bolivar-stranger-things-frontend:master;
+
+https://stranger-things-bolivar-front.herokuapp.com/;
+
+git push production bolivar-stranger-things-frontend:master;
+
+https://stranger-things-bolivar-frontd.herokuapp.com/;
 
 ### 6 - Deploy Heroku
 
