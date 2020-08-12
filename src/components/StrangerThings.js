@@ -5,13 +5,13 @@ const getRealityClass = (hereIsTheUpsideDownWorld) =>
   hereIsTheUpsideDownWorld ? "upside-down" : "stranger-things";
 
 const strangerThingsConfig = {
-  // url: 'http://localhost:3002',
-  timeout: 30000,
+  url: process.env.URL,
+  timeout: process.env.TIMEOUT,
 };
 
 const upsideDownConfig = {
-  // url: "http://localhost:3003",
-  timeout: 30000,
+  url: process.env.URL,
+  timeout: process.env.TIMEOUT,
 };
 
 const charactersService = new CharactersService(strangerThingsConfig);

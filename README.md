@@ -12,9 +12,14 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 
 ### 9 - Deploy Heroku
 
-Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
+heroku create --buildpack mars/create-react-app;
+heroku create --remote hawkins stranger-things-bolivar-front --buildpack mars/create-react-app;
+heroku create --remote upside-down stranger-things-bolivar-frontd --buildpack mars/create-react-app;
+git remote -v;
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+heroku config:set URL=https://stranger-things-bolivar-front.herokuapp.com/ TIMEOUT=3000 PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-front;
+
+heroku config:set URL=https://stranger-things-bolivar-frontd.herokuapp.com/ TIMEOUT=5000 PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-frontd;
 
 ## Bônus
 
@@ -42,8 +47,8 @@ git status: On branch bolivar-stranger-things-backend;
 
   - heroku config:set
     upsideDown="false"
-    PM2_PUBLIC_KEY=yv16rnirig4y70n
-    PM2_SECRET_KEY=ehot5qk1n1khzlu
+    PM2_PUBLIC_KEY=PUBLIC_KEY
+    PM2_SECRET_KEY=SCRECT_KEY
     PM2_MACHINE_NAME=andersonbolivar-15aa
     --app stranger-things-bolivar;
   - heroku config:set
