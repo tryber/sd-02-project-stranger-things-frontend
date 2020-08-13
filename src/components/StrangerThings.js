@@ -10,7 +10,7 @@ const strangerThingsConfig = {
 };
 
 const upsideDownConfig = {
-  url: process.env.REACT_APP_URL,
+  url: process.env.REACT_APP_URL_DOWN,
   timeout: process.env.REACT_APP_TIMEOUT,
 };
 
@@ -52,7 +52,6 @@ class StrangerThings extends React.Component {
   }
 
   searchClick() {
-    console.log(process.env);
     this.setState(
       {
         page: 1,
@@ -111,7 +110,7 @@ class StrangerThings extends React.Component {
               Mudar de Realidade
             </button>
           </div>
-          <h2>Ambiente: {process.env.NODE_ENV}</h2>
+          <h2>Ambiente: {process.env.REACT_APP_NODE_ENV}</h2>
           <div>
             <input
               placeholder="Nome do Personagem"
