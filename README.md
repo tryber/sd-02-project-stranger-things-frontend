@@ -4,7 +4,7 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 
 **Lembre-se**: coloque as respostas apenas dos requisitos que contém o seguinte direcionamento:
 
-  - Adicione os comandos utilizados, de maneira sequencial, ao README do frontend.
+- Adicione os comandos utilizados, de maneira sequencial, ao README do frontend.
 
 **Nota**: Este direcionamento está presente no [repositório](https://github.com/tryber/sd-01-project-stranger-things) em que os requisitos do projeto são destrinchados.
 
@@ -12,14 +12,42 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 
 ### 9 - Deploy Heroku
 
-Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
+git status: On branch bolivar-stranger-things-backend;
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+- Login no Heroku
+
+  - heroku login;
+
+- Remotes:
+
+  - heroku create
+    --remote hawkins
+    stranger-things-bolivar-dev
+    --buildpack mars/create-react-app;
+  - git remote -v;
+
+- Variáveis de Ambiente:
+
+  - heroku config:set REACT_APP_URL=https://stranger-things-bolivar.herokuapp.com/ REACT_APP_URL_DOWN=https://stranger-things-bolivar-down.herokuapp.com/ REACT_APP_TIMEOUT=3000 PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-dev;
+
+- Deploy:
+
+  - git add;
+  - git commit -m "BOLIVAR"
+  - git push hawkins bolivar-stranger-things-frontend:master;
 
 ## Bônus
 
 ### 10 - Multi-ambientes
 
-Para tornar a minha a minha aplicação Multi-ambiente, fiz o seguinte procedimento:
+git remote rename hawkins development;
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+heroku config:set REACT_APP_NODE_ENV=development --app stranger-things-bolivar-dev;
+
+heroku create --remote production stranger-things-bolivar-prod --buildpack mars/create-react-app;
+
+heroku config:set REACT_APP_URL=https://stranger-things-bolivar.herokuapp.com/ REACT_APP_URL_DOWN=https://stranger-things-bolivar-down.herokuapp.com/ REACT_APP_TIMEOUT=3000 REACT_APP_NODE_ENV=production PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-prod;
+
+git push development bolivar-stranger-things-frontend:master;
+
+git push production bolivar-stranger-things-frontend:master;
