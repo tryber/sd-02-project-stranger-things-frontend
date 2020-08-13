@@ -28,13 +28,7 @@ git status: On branch bolivar-stranger-things-backend;
 
 - Variáveis de Ambiente:
 
-  - heroku config:set
-    URL=https://stranger-things-bolivar.herokuapp.com/
-    TIMEOUT=3000
-    PM2_PUBLIC_KEY=yv16rnirig4y70n
-    PM2_SECRET_KEY=ehot5qk1n1khzlu
-    PM2_MACHINE_NAME=andersonbolivar-15aa
-    --app stranger-things-bolivar-dev;
+  - heroku config:set REACT_APP_URL=https://stranger-things-bolivar.herokuapp.com/ REACT_APP_TIMEOUT=3000 PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-dev;
 
 - Deploy:
 
@@ -48,10 +42,12 @@ git status: On branch bolivar-stranger-things-backend;
 
 git remote rename hawkins development;
 
-heroku config:set NODE_ENV=development --app stranger-things-bolivar-dev;
+heroku config:set REACT_APP_NODE_ENV=development --app stranger-things-bolivar-dev;
 
 heroku create --remote production stranger-things-bolivar-prod;
 
-heroku config:set URL=https://stranger-things-bolivar-down.herokuapp.com/ TIMEOUT=3000 NODE_ENV=production PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-prod;
+heroku config:set REACT_APP_URL=https://stranger-things-bolivar-down.herokuapp.com/ REACT_APP_TIMEOUT=3000 REACT_APP_NODE_ENV=production PM2_PUBLIC_KEY=yv16rnirig4y70n PM2_SECRET_KEY=ehot5qk1n1khzlu PM2_MACHINE_NAME=andersonbolivar-15aa --app stranger-things-bolivar-prod;
+
+git push development bolivar-stranger-things-frontend:master;
 
 git push production bolivar-stranger-things-frontend:master;
