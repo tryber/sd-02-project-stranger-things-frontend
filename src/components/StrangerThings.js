@@ -5,7 +5,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
   hereIsTheUpsideDownWorld ? 'upside-down' : 'stranger-things'
 );
 
-console.log('teste2')
+console.log(process.env.REACT_APP_TIMEOUT_HAWKINS)
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS,
