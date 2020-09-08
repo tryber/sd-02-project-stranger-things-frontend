@@ -14,7 +14,11 @@ Aqui você vai encontrar os locais para colocar suas repostas relativas aos requ
 
 Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 
-`Adicione aqui os comandos utilizados, de maneira sequencial.`
+heroku create --remote heroku stranger-things-frontend-123 --buildpack mars/create-react-app
+
+heroku config:set REACT_APP_HAWKINS=https://stranger-things-216987.herokuapp.com REACT_APP_TIMEOUT_HAWKINS=30000 REACT_APP_UPSIDE_DOWN=https://stranger-things-216988.herokuapp.com REACT_APP_TIMEOUT_UPSIDE_DOWN=30000 --app stranger-things-frontend-123
+
+git push heroku mateus-stranger-things-frontend:master 
 
 ## Bônus
 
@@ -23,3 +27,4 @@ Para realizar o deploy do meu frontend, fiz o seguinte procedimento:
 Para tornar a minha a minha aplicação Multi-ambiente, fiz o seguinte procedimento:
 
 `Adicione aqui os comandos utilizados, de maneira sequencial.`
+git remote rename heroku development
